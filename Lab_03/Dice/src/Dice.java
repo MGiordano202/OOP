@@ -11,7 +11,57 @@ public class Dice {
         String choice = "no";
         Scanner in = new Scanner(System.in);
 
-        /* TODO */
+        do {
+
+
+            do {
+
+                System.out.println("Quale numero uscirà tirando il dado?");
+                predictedValue = in.nextInt();
+                in.nextLine();
+                if (predictedValue < 1 || predictedValue > 6) {
+                    System.out.println("Inserisci un numero compreso tra 1 e 6");
+                }
+
+            } while (predictedValue < 1 || predictedValue > 6);
+
+            do {
+                System.out.println("Quanto vuoi scommettere?");
+                bet = in.nextDouble();
+                in.nextLine();
+                if (playerAccount.getBalance() < bet || casinoAccount.getBalance() < bet * 5) {
+                    System.out.println("La somma scommessa è troppo alta");
+                }
+
+            } while (playerAccount.getBalance() < bet || casinoAccount.getBalance() < bet * 5);
+
+            Random rnd = new Random();
+
+            actualValue = rnd.nextInt(1, 7);
+            System.out.println("Il dado ha restituito: " + actualValue);
+
+            if (predictedValue == actualValue) {
+
+                playerAccount.deposit(bet * 5);
+                casinoAccount.withdraw(bet * 5);
+                System.out.println("Importo vinto: "+ bet *5);
+            }
+            else
+            {
+
+               playerAccount.withdraw(bet);
+               casinoAccount.deposit(bet);
+               System.out.println("Hai perso:" + bet);
+
+            }
+
+            if(playerAccount.getBalance() > 0)
+            {
+                System.out.println("Vuoi continuare a scommettere?");
+                choice = in.nextLine();
+            }
+
+        }while(playerAccount.getBalance() > 0 && choice.equals("si") );
 
         System.out.println("Il tuo saldo è " + playerAccount.getBalance());
 
