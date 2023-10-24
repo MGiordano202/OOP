@@ -9,8 +9,10 @@ public class Bank {
         this.accounts = new ArrayList<>();
     }
 
-    public void addAccount(double initialBalance, String customerName) {
-        /* TODO */
+    public void addAccount(double initialBalance, String customerName)
+    {
+        BankAccount account = new BankAccount(initialBalance, customerName);
+        this.accounts.add(account);
     }
 
     public BankAccount find(int accountNumber) {
@@ -22,18 +24,34 @@ public class Bank {
     }
 
     public void deposit(int accountNumber, double amount) {
-        /* TODO */
+        BankAccount account = this.find(accountNumber);
+        account.deposit(amount);
+
     }
 
     public void withdraw(int accountNumber, double amount) {
-        /* TODO */
+        BankAccount account = this.find(accountNumber);
+        if(getBalance(accountNumber) > 0)
+        {
+            account.withdraw(amount);
+        }else {
+            System.out.println("Credito insufficente");
+        }
     }
 
     public double getBalance(int accountNumber) {
-        /* TODO */
+        BankAccount account = this.find(accountNumber);
+        return account.getBalance();
     }
 
-    public void transfer(int fromAccountNumber, int toAccountNumber, double amount) {
-        /* TODO */
+    public void transfer(int fromAccountNumber, int toAccountNumber, double amount)
+    {
+
+        BankAccount fromAccount = this.find(fromAccountNumber);
+        BankAccount toAccount = this.find(toAccountNumber);
+        fromAccount.withdraw(amount);
+        toAccount.deposit(amount);
+
+
     }
 }
