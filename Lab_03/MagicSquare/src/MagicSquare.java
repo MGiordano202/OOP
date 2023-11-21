@@ -32,14 +32,92 @@ public class MagicSquare {
     }
 
     public void add(int x) {
-        /* TODO */
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                if(square[i][j] == 0)
+                {
+                    square[i][j] = x;
+                    return;
+                }
+
+
+
+            }
+        }
     }
 
     public boolean isMagic() {
         int magicNumber = 0;
         boolean isMagic = true;
 
-        /* TODO */
+        //checking first row
+        for(int j = 0; j < n; j++)
+        {
+            magicNumber += square[0][j];
+        }
+
+        //checking second and third row
+        for(int i = 1; i < n; i++)
+        {
+            int sumRow = 0;
+            for(int j = 0; j < n; j++)
+            {
+                sumRow += square[i][j];
+            }
+
+            if(sumRow != magicNumber)
+            {
+                isMagic = false;
+                break;
+            }
+        }
+
+        //checking column
+        if(isMagic)
+        {
+            for (int i = 0; i < n; i++) {
+                int sumCol = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    sumCol += square[i][j];
+                }
+                if (sumCol != magicNumber)
+                {
+                    isMagic = false;
+                    break;
+                }
+            }
+
+        }
+
+        //checking first diagonal
+        if (isMagic) {
+            int sum_diagonal = 0;
+            int j = 0;
+            for (int i = 0; i < n; i++) {
+                sum_diagonal += square[i][j];
+                j++;
+            }
+            if (sum_diagonal != magicNumber) {
+                isMagic = false;
+            }
+        }
+
+        //checking second diagonal
+        if (isMagic) {
+            int sum_diagonal = 0;
+            int j = 0;
+            for (int i = n - 1; i >= 0; i--) {
+                sum_diagonal += square[i][j];
+                j++;
+            }
+            if (sum_diagonal != magicNumber) {
+                isMagic = false;
+            }
+        }
+
 
         return isMagic;
     }

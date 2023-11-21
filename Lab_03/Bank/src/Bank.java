@@ -25,17 +25,19 @@ public class Bank {
 
     public void deposit(int accountNumber, double amount) {
         BankAccount account = this.find(accountNumber);
+
         account.deposit(amount);
 
     }
 
     public void withdraw(int accountNumber, double amount) {
         BankAccount account = this.find(accountNumber);
-        if(getBalance(accountNumber) > 0)
+        if( amount > getBalance(accountNumber))
         {
-            account.withdraw(amount);
-        }else {
             System.out.println("Credito insufficente");
+
+        }else {
+            account.withdraw(amount);
         }
     }
 

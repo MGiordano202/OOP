@@ -20,7 +20,7 @@ public class TrainTest {
         intermediateStops.add(RomaStop);
         intermediateStops.add(BolognaStop);
         Train t = new Train(SalernoStop, MilanoStop, intermediateStops, 457, 876);
-        Assert.assertEquals(5, t.getTotalNumberOfStops());
-        Assert.assertEquals(200166, t.computeMaxRevenues(0.50), 0);
+        Assert.assertEquals(5, t.ReturnFermateTotali());
+        Assert.assertEquals(200166, t.CalcolaCosti(0.50), 0);
     }
 }

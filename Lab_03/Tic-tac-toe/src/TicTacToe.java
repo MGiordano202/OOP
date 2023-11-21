@@ -32,7 +32,113 @@ public class TicTacToe {
     }
 
     public String getWinner() {
-        /* TODO */
+            int P1Element = 0;
+            int P2Element = 0;
+
+            //controllo righe
+            for(int i = 0; i < ROWS; i++)
+            {
+                for(int j = 0; j < COLUMNS; j++)
+                {
+                    if(board[i][j].equals(player1))
+                    {
+                        P1Element++;
+                        if(P1Element == 3)
+                        {
+                            return player1;
+                        }
+                    }else {
+                        if (board[i][j].equals(player2))
+                        {
+                            P2Element++;
+                            if (P2Element == 3)
+                            {
+                                return player2;
+                            }
+                        }
+
+                    }
+                }
+                P1Element = 0;
+                P2Element = 0;
+            }
+
+
+
+        //controllo colonne
+        for(int i = 0; i < COLUMNS; i++)
+        {
+            for(int j = 0; j < ROWS; j++)
+            {
+                if(board[j][i].equals(player1))
+                {
+                    P1Element++;
+                    if(P1Element == 3)
+                    {
+                        return player1;
+                    }
+                }else { if(board[j][i].equals(player2))
+                    {
+                        P2Element++;
+
+                        if(P2Element == 3)
+                        {
+                            return player2;
+                        }
+                    }
+                }
+            }
+            P1Element = 0;
+            P2Element = 0;
+        }
+
+
+//controllo diagonale a00 a11 a22
+        for(int i = 0; i < ROWS; i++)
+        {
+            if(board[i][i].equals(player1))
+            {
+                P1Element++;
+                if(P1Element == 3)
+                {
+                    return player1;
+                }
+            }else {
+                if (board[i][i].equals(player2))
+                {
+                    P2Element++;
+                    if (P2Element == 3)
+                    {
+                        return player2;
+                    }
+                }
+            }
+        }
+        P1Element = 0;
+        P2Element = 0;
+//controllo diagonale a02 a11 a20
+        for(int j = 2, i = 0; j >= 0; j--, i++)
+        {
+            if(board[i][j].equals(player1))
+            {
+                P1Element++;
+                if(P1Element == 3)
+                {
+                    return player1;
+                }
+            }else {
+                if(board[i][j].equals(player2))
+                {
+                    P2Element++;
+                    if(P2Element == 3)
+                    {
+                        return player2;
+                    }
+                }
+            }
+        }
+
+        return "Nessun vincitore";
     }
 
     public static void main(String[] args) {
@@ -63,7 +169,17 @@ public class TicTacToe {
             if (row >= ROWS || column >= COLUMNS) {
                 System.out.println("Combinazione non valida");
             } else {
-                /* TODO */
+                game.set(row, column, player);
+
+                System.out.println(game);
+
+                System.out.println("Il Vincitore è: " + game.getWinner());
+
+                if (player.equals(player1)) {
+                    player = player2;
+                } else {
+                    player = player1;
+                }
             }
 
         } while (row < ROWS && column < COLUMNS);
