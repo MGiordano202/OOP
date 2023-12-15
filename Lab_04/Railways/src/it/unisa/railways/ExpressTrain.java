@@ -9,7 +9,7 @@ public class ExpressTrain {
     private final double KmPercorsi;
     private final int NumeroDiPosti;
 
-    public ExpressTrain( TrainStop StazioneDiPartenza, TrainStop StazioneDiArrivo, List<TrainStop> FermateIntermedie, double KmPercorsi, int NumeroDiPosti)
+    public ExpressTrain( TrainStop StazioneDiPartenza, TrainStop StazioneDiArrivo, List<TrainStop> FermateIntermedie, double KmPercorsi, int NumeroDiPosti, int numberOfResturantSeat)
     {
         this.StazioneDiPartenza = StazioneDiPartenza;
         this.StazioneDiArrivo = StazioneDiArrivo;
@@ -48,8 +48,8 @@ public class ExpressTrain {
 
     public double CalcolaCosti( double serviceRevenuePerKmPerson, double resturantRevenuePerKmPerson)
     {
-        double ServiceRevenue = this.KmPercorsi * this.NumeroDiPosti * serviceRevenuePerKmPerson;
-        double resturantRevenue = this.KmPercorsi * this.NumeroDiPosti * resturantRevenuePerKmPerson;
+        double ServiceRevenue = this.KmPercorsi * this.ReturnPosti() * serviceRevenuePerKmPerson;
+        double resturantRevenue = this.KmPercorsi * this.ReturnPosti() * resturantRevenuePerKmPerson;
         return ServiceRevenue + resturantRevenue;
     }
 

@@ -8,22 +8,42 @@ public class DataSet {
     private int count;
 
     public DataSet() {
-        /* TODO */
+        sum = 0;
+        minimum = null;
+        maximum = null;
+        count = 0;
     }
 
     public double getAverage() {
-        /* TODO */
+        if(count == 0)
+        {
+            return 0;
+        }else
+        {
+            return sum / count;
+        }
+
     }
 
     public Measurable getMaximum() {
-        /* TODO */
+        return maximum;
     }
 
     public Measurable getMinimum() {
-        /* TODO */
+        return minimum;
     }
 
     public void add(Measurable x) {
-        /* TODO */
+        sum = sum + x.getMeasure();
+
+        if(count == 0 || minimum.getMeasure() > x.getMeasure())
+        {
+            minimum = x;
+        }
+        if(count == 0 || maximum.getMeasure() < x.getMeasure())
+        {
+            maximum = x;
+        }
+        count ++;
     }
 }

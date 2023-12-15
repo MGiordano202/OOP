@@ -1,6 +1,6 @@
 package it.unisa.country;
 
-public class Country /* TODO */ {
+public class Country implements Comparable<Country> {
 
     final private String name;
     final private double surfaceArea;
@@ -18,6 +18,10 @@ public class Country /* TODO */ {
         return surfaceArea;
     }
 
-    /* TODO */
+    @Override
+    public int compareTo(Country country)
+    {
+        return Double.compare(this.surfaceArea, surfaceArea);
+    }
 
 }

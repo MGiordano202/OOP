@@ -20,7 +20,7 @@ public class ExpressTrainTest {
         intermediateStops.add(NapoliStop);
         intermediateStops.add(RomaStop);
         intermediateStops.add(BolognaStop);
-        ExpressTrain t = new ExpressTrain(SalernoStop, MilanoStop, intermediateStops, 457, 876);
+        ExpressTrain t = new ExpressTrain(SalernoStop, MilanoStop, intermediateStops, 457, 876, 100 );
         Assert.assertEquals(5, t.ReturnFermateTotali());
         Assert.assertEquals(226446, t.CalcolaCosti(0.50, 0.30), 0);
     }

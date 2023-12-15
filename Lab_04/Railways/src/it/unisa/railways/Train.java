@@ -48,7 +48,7 @@ public class Train {
 
     public double CalcolaCosti( double serviceRevenuePerKmPerson)
     {
-        return this.KmPercorsi * this.NumeroDiPosti * serviceRevenuePerKmPerson;
+        return this.KmPercorsi * this.ReturnPosti() * serviceRevenuePerKmPerson;
     }
 
 }
