@@ -10,7 +10,7 @@ files:
           length: 10
           offset: 263
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
         encrypted_possible_answer: Nzk4c4UWSfGOGB/IApH8lH5N6cD/NXqk35/cyPb1T/0MwfzFTYmmFWjKAtlGGOr4vB1kNJJaqn1LalNkiWvwf0UH98GSq1h+asxDWdMGMWg4FpSrXvALqpRGWwpy1hkf
       - offset: 352

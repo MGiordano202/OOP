@@ -52,7 +52,7 @@ public class PhoneCompany {
             int usedMinutes = user.getUsedMinutes();
             double usedMB = user.getUsedMB();
             int usedSMS = user.getUsedSMS();
-
-            user.setTotalCost(usedMinutes * minutePrice + usedSMS * smsPrice + usedMB * gbPrice / 1000);
+            double totalcost = user.getUsedSMS()*this.smsPrice + user.getUsedMB() / 1000 *this.gbPrice + user.getUsedMinutes()*this.minutePrice;
+            user.setTotalCost(totalcost);
         }
 }

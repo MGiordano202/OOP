@@ -8,7 +8,7 @@ files:
     visible: true
     placeholders:
       - offset: 47
-        length: 10
+        length: 14
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -17,8 +17,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: xTttar4JhBTdXhVvoEe7+A==
-      - offset: 65
-        length: 10
+      - offset: 69
+        length: 0
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -27,8 +27,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: QynPptvfifBZ+dcy65+m/ol62q+v8qIIMs8D2PVKmxQ=
-      - offset: 81
-        length: 10
+      - offset: 71
+        length: 485
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -37,8 +37,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: DEib5423Y8u/qwhdL6pfRGAgQnu6Vio5EkQfS5CVeuhmLQIuLcQJR+QDkhaa8switXfoIkIo95NHfMUe40KcUQhihweDMkdK6eZ/8LXbDPo4WMINYvIUM58XX7AYufm1wAhK1YNjoW96KSG5/EUOtU/31WJ31wLH2wW1TVuOdqydfLQ34ToxI5QZb1rjkAUjL4a87GnGNae2mex3QSTKV2vkeaEFWHuhOMBOkpWhrM1LV/88mlF98OswsK6ExU8t
-      - offset: 97
-        length: 10
+      - offset: 93
+        length: 467
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -53,7 +53,7 @@ files:
     visible: true
     placeholders:
       - offset: 49
-        length: 10
+        length: 14
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -62,8 +62,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: xTttar4JhBTdXhVvoEe7+A==
-      - offset: 67
-        length: 10
+      - offset: 71
+        length: 45
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -72,8 +72,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: 3K3MVePIeljeQyoTnx/AarvJ/oKdIXniXqCPlrN4n4WH1b6bD2wy/MGCqO02BwhX
-      - offset: 83
-        length: 10
+      - offset: 122
+        length: 192
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -82,8 +82,8 @@ files:
         selected: false
         status: Unchecked
         encrypted_possible_answer: GIkcU5j8758cLsaWvdeB6Hwy42dTpw+FvxyHkLYNwt4YqfL1KnpUhpBJngYFWO4TnpVZTmmMTRAwPwUQGawRjndkQo1dSE5bQXpFF/ToM95p/lDw/6jPclj+EZdpW8fdD3qBGidscGH0Z4TKhzjsIvB8ciUj2r03QEDnTG8T0bOsyAj1mRy3D2hqcT9aNKds8w4zquFggXTRorBO11KWpB/iFTKqAlAOdvJSUQ9k3suIXDJoIUkoOQR2CpBSUjNI
-      - offset: 99
-        length: 10
+      - offset: 320
+        length: 297
         placeholder_text: /* TODO */
         initial_state:
           length: 10
@@ -106,5 +106,5 @@ files:
     visible: true
     encrypted_text: YsPfolFLo/rZ2mVBdVwjqJ2ZGxn7OoNSllzEECVNBRGSJePugHY87KROtqHZGgee4wFRJrVpxZ3qfUu27kD4PDsUaEmwsPNSGuRDvyQ609T2U2bgESGNC9QRJ0g3J/ROF6e59rzuaVuv/P66v0ZJAgebmjr8nStLZ6qUEjOMwWz3v6SdnEj/0GcuJ+w+qozXMTL9dRJ+C6YX+rfwuEfASVtVuKWECr9jlg7WIAzVaiaKWafbqP8VU6Z6HRJW+wuJyHcewvumMM1FYqT3xf1qYRBQyx3YD45OmPsez3D7pgdYuIv9pwr3mApheDIxe8tLXOGGnYPltVqftto43Ng030gdMFsEbkk6lR0SnYTl1+a51UY5Ht/z7OXZHwdvU+0ub6HwgbSHHE7f0Ewr3TLxvGj+vrv7Yog+XaLTQ89jPcGtl2ockLtQ+Wi6s6j8zavEvbm7VojugxmVBm53q2cGL4cQtOaq114Vb7WhgZCM8y8=
     learner_created: false
-status: Unchecked
+status: Solved
 record: -1
