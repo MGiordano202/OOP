@@ -10,10 +10,14 @@ public class MedicalTest implements Comparable<MedicalTest> {
 
     private GregorianCalendar date;
 
-    /* TODO */
+    public MedicalTest (String doctorName)
+    {
+         this.doctorName = doctorName;
+    }
 
     public void conductTest(String report, GregorianCalendar date) {
-        /* TODO */
+        this.report = report;
+        this.date = date;
     }
 
     public String getDoctorName() {

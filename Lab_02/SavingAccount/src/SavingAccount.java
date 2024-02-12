@@ -46,7 +46,7 @@ public class SavingAccount {
     {
         double interest;
 
-        interest = balance * interestRate * 90 / 36500;
+        interest = balance * interestRate * 90 / 36000;
 
         balance = balance + interest;
 
